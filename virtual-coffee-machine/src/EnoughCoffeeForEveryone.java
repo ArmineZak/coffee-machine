@@ -44,6 +44,8 @@ public class EnoughCoffeeForEveryone {
         } else if (waterAmount == 0 && milkAmount == 0 && coffeeBeansAmount == 0 && cupsAmount == 0) {
             System.out.println("Yes, I can make that amount of coffee");
 
+        } else if (min == 1 && cupsAmount == 0) {
+            System.out.println("Yes, I can make that amount of coffee(and even " + min + " more than that");
         }
     }
 }
