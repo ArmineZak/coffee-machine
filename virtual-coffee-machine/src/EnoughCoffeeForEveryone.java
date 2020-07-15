@@ -23,5 +23,11 @@ public class EnoughCoffeeForEveryone {
         System.out.print("\nWrite how many cups of coffee you will need:\n" + "> ");
         int cupsAmount = scanAmountOfCups.nextInt();
 
+
+
+        int min = waterAmount / waterForOneCup;
+        min = (min < milkAmount / milkForOneCup) ? min : milkAmount / milkForOneCup;
+        min = (min < coffeeBeansAmount / coffeeBeansForOneCup) ? min : coffeeBeansAmount / coffeeBeansForOneCup;
+
     }
 }
