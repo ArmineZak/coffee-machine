@@ -24,7 +24,6 @@ public class EnoughCoffeeForEveryone {
         int cupsAmount = scanAmountOfCups.nextInt();
 
 
-
         int min = waterAmount / waterForOneCup;
         min = (min < milkAmount / milkForOneCup) ? min : milkAmount / milkForOneCup;
         min = (min < coffeeBeansAmount / coffeeBeansForOneCup) ? min : coffeeBeansAmount / coffeeBeansForOneCup;
@@ -33,7 +32,10 @@ public class EnoughCoffeeForEveryone {
         if (cupsAmount == min) {
             System.out.println("Yes, I can make that amount of coffee.");
 
-        }
+        } else if (cupsAmount > min) {
+            System.out.println("No, I can make only " + min + " cup(s) of coffee.");
 
+
+        }
     }
 }
