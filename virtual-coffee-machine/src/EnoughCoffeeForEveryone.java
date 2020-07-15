@@ -29,5 +29,11 @@ public class EnoughCoffeeForEveryone {
         min = (min < milkAmount / milkForOneCup) ? min : milkAmount / milkForOneCup;
         min = (min < coffeeBeansAmount / coffeeBeansForOneCup) ? min : coffeeBeansAmount / coffeeBeansForOneCup;
 
+
+        if (cupsAmount == min) {
+            System.out.println("Yes, I can make that amount of coffee.");
+
+        }
+
     }
 }
