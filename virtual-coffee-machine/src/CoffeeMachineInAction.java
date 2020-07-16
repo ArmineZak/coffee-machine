@@ -69,6 +69,27 @@ public class CoffeeMachineInAction {
                 break;
             }
 
+            case "fill": {
+                System.out.print("Write how many ml of water do you want to add:\n" + "> ");
+                int waterAmount = sc.nextInt();
+
+                System.out.print("\nWrite how many ml of milk do you want to add:\n" + "> ");
+                int milkAmount = sc.nextInt();
+
+                System.out.print("\nWrite how many grams of coffee beans do you want to add:\n" + "> ");
+                int coffeeBeansAmount = sc.nextInt();
+
+                System.out.print("\nWrite how many disposable cups of coffee do you want:\n" + "> ");
+                int disposableCupsAmount = sc.nextInt();
+
+                System.out.println("The coffee machine has:\n" +
+                        (waterInMachine + waterAmount) + " ml  of water\n" +
+                        (milkInMachine + milkAmount) + " ml of milk\n" +
+                        (coffeeBeansInMachine + coffeeBeansAmount) + " g of coffee beans\n" +
+                        (disposableCupsInMachine + disposableCupsAmount) + "  of disposable cups\n" +
+                        moneyInMachine + " of money");
+                break;
+
 
         }
     }
