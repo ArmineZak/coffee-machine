@@ -7,21 +7,18 @@ public class EnoughCoffeeForEveryone {
         int milkForOneCup = 50;
         int coffeeBeansForOneCup = 15;
 
-        Scanner scanWater = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Write how many ml of water the coffee machine has:\n" + "> ");
-        int waterAmount = scanWater.nextInt();
+        int waterAmount = sc.nextInt();
 
-        Scanner scanMilk = new Scanner(System.in);
         System.out.print("\nWrite how many ml of milk the coffee machine has:\n" + "> ");
-        int milkAmount = scanMilk.nextInt();
+        int milkAmount = sc.nextInt();
 
-        Scanner scanCoffeeBeans = new Scanner(System.in);
         System.out.print("\nWrite how many grams of coffee beans the coffee machine has:\n" + "> ");
-        int coffeeBeansAmount = scanCoffeeBeans.nextInt();
+        int coffeeBeansAmount = sc.nextInt();
 
-        Scanner scanAmountOfCups = new Scanner(System.in);
         System.out.print("\nWrite how many cups of coffee you will need:\n" + "> ");
-        int cupsAmount = scanAmountOfCups.nextInt();
+        int cupsAmount = sc.nextInt();
 
 
         int min = waterAmount / waterForOneCup;
