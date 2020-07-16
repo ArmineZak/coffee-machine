@@ -1,4 +1,4 @@
-import java.util.Scanner ;
+import java.util.Scanner;
 
 public class CoffeeMachineInAction {
     public static void main(String[] args) {
@@ -37,6 +37,41 @@ public class CoffeeMachineInAction {
         Scanner sc = new Scanner(System.in);
         System.out.print("Write action (buy, fill, take)\n" + "> ");
         String action = sc.nextLine();
+
+        switch (action) {
+            case "buy": {
+                System.out.print("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino:\n" + ">");
+                int coffee = sc.nextInt();
+
+                if (coffee != 2 && coffee != 3) {
+                    System.out.println("The coffee machine has:\n" +
+                            (waterInMachine - waterForEspresso) + " ml  of water\n" +
+                            (milkInMachine - milkForEspresso) + " ml of milk\n" +
+                            (coffeeBeansInMachine - coffeeBeansForEspresso) + " g of coffee beans\n" +
+                            (disposableCupsInMachine - 1) + "  of disposable cups\n" +
+                            (moneyInMachine + costOfEspresso) + " of money");
+
+                } else if (coffee != 1 && coffee != 3)
+                    System.out.println("The coffee machine has:\n" +
+                            (waterInMachine - waterForLatte) + " ml  of water\n" +
+                            (milkInMachine - milkForLatte) + " ml of milk\n" +
+                            (coffeeBeansInMachine - coffeeBeansForLatte) + " g of coffee beans\n" +
+                            (disposableCupsInMachine - 1) + "  of disposable cups\n" +
+                            (moneyInMachine + costOfLatte) + " of money");
+
+                else
+                    System.out.println("The coffee machine has:\n" +
+                            (waterInMachine - waterForCappuccino) + " ml  of water\n" +
+                            (milkInMachine - milkForCappuccino) + " ml of milk\n" +
+                            (coffeeBeansInMachine - coffeeBeansForCappuccino) + " g of coffee beans\n" +
+                            (disposableCupsInMachine - 1) + "  of disposable cups\n" +
+                            (moneyInMachine + costOfCappuccino) + " of money");
+                break;
+            }
+
+
+        }
     }
+
 
 }
