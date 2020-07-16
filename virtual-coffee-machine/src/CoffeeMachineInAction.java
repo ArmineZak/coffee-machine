@@ -89,10 +89,20 @@ public class CoffeeMachineInAction {
                         (disposableCupsInMachine + disposableCupsAmount) + "  of disposable cups\n" +
                         moneyInMachine + " of money");
                 break;
+            }
+            case "take": {
+                System.out.println("I gave you $" + moneyInMachine);
+                System.out.println("The coffee machine has:\n" +
+                        waterInMachine + "  of water\n" +
+                        milkInMachine + "  of milk\n" +
+                        coffeeBeansInMachine + "  of coffee beans\n" +
+                        disposableCupsInMachine + "    of disposable cups\n" +
+                        (moneyInMachine - moneyInMachine) + "    of money");
+                break;
 
-
+            }
         }
     }
-
-
 }
+
+
