@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.*;
 
 public class EnoughCoffeeRound2 {
     public static void main(String[] args) {
@@ -21,9 +22,11 @@ public class EnoughCoffeeRound2 {
         int cupsAmount = sc.nextInt();
 
 
-        int min = waterAmount / waterForOneCup;
-        min = (min < milkAmount / milkForOneCup) ? min : milkAmount / milkForOneCup;
-        min = (min < coffeeBeansAmount / coffeeBeansForOneCup) ? min : coffeeBeansAmount / coffeeBeansForOneCup;
+        int minWater = waterAmount / waterForOneCup;
+        int minMilk = milkAmount / milkForOneCup;
+        int minCoffeeBeans = coffeeBeansAmount / coffeeBeansForOneCup;
+
+        int min = Math.min(minWater, Math.min(minMilk, minCoffeeBeans));
 
 
         if (cupsAmount == min) {
@@ -35,14 +38,7 @@ public class EnoughCoffeeRound2 {
         } else if (cupsAmount < min) {
             System.out.println("Yes, I can make that amount of coffee(and even " + (min - cupsAmount) + " more than that)");
 
-        } else if (min == 0) {
-            System.out.println("No,I can make only " + min + "cup(s) of coffee");
-
-        } else if (waterAmount == 0 && milkAmount == 0 && coffeeBeansAmount == 0 && cupsAmount == 0) {
-            System.out.println("Yes, I can make that amount of coffee");
-
-        } else if (min == 1 && cupsAmount == 0) {
-            System.out.println("Yes, I can make that amount of coffee(and even " + min + " more than that");
         }
     }
+
 }
