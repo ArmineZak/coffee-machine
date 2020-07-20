@@ -11,13 +11,13 @@ public class EnoughCoffeeRound2 {
         System.out.print("Write how many ml of water the coffee machine has:\n" + "> ");
         int waterAmount = sc.nextInt();
 
-        System.out.print("\nWrite how many ml of milk the coffee machine has:\n" + "> ");
+        System.out.print("Write how many ml of milk the coffee machine has:\n" + "> ");
         int milkAmount = sc.nextInt();
 
-        System.out.print("\nWrite how many grams of coffee beans the coffee machine has:\n" + "> ");
+        System.out.print("Write how many grams of coffee beans the coffee machine has:\n" + "> ");
         int coffeeBeansAmount = sc.nextInt();
 
-        System.out.print("\nWrite how many cups of coffee you will need:\n" + "> ");
+        System.out.print("Write how many cups of coffee you will need:\n" + "> ");
         int cupsAmount = sc.nextInt();
 
 
