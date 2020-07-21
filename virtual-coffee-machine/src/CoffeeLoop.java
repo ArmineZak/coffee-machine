@@ -62,10 +62,15 @@ public class CoffeeLoop {
         int fillCoffee = sc.nextInt();
         coffee += fillCoffee;
 
+        System.out.print("Add cups: \n" + "> ");
+        int addCups = sc.nextInt();
+        coffee += addCups;
+
         System.out.println("Machine has\n " +
                 water + " ml water\n" +
                 milk + " ml milk\n" +
                 coffee + " g coffee\n" +
+                cups + " cups\n" +
                 cash + "$\n");
     }
 
