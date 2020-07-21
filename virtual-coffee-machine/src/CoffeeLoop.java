@@ -161,4 +161,15 @@ public class CoffeeLoop {
             break;
         }
     }
+
+    //this method gives option to revert back to menu
+    public static void revertBuy() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("If you want to cancel your order type back or type any key to continue.");
+        String userInput = input.nextLine();
+
+        if ("back".equals(userInput)) {
+            System.out.println("You are in main menu.");
+        }
+    }
 }
