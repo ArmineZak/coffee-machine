@@ -111,6 +111,7 @@ public class CoffeeLoop {
                     cups -= 1;
                     cash += 4;
                     System.out.println("I can make you coffee.");
+                    revertBuy();
 
                 } else {
                     System.out.print("Coffee machine is out of ingredients.\n" +
@@ -131,6 +132,7 @@ public class CoffeeLoop {
                     cups -= 1;
                     cash += 7;
                     System.out.println("I can make you coffee.");
+                    revertBuy();
 
                 } else {
                     System.out.print("Coffee machine is out of ingredients.\n" +
@@ -152,6 +154,7 @@ public class CoffeeLoop {
                     cups -= 1;
                     cash += 6;
                     System.out.println("I can make you coffee.");
+                    revertBuy();
 
                 } else {
                     System.out.print("Coffee machine is out of ingredients.\n" +
