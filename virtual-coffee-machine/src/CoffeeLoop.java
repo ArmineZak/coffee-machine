@@ -7,11 +7,45 @@ public class CoffeeLoop {
     public static int coffee = 120;
     public static int cups = 9;
     public static int cash = 550;
+    private static String input;
 
     public static void main(String[] args) {
 
 
+        while (true) {
+            System.out.print("Write action buy, fill, take, remaining, exit:\n" + "> ");
+            Scanner input = new Scanner(System.in);
+            String userInput = input.nextLine();
+
+            if ("exit".equals(userInput)) {
+                break;
+            } else {
+                checkInput(userInput);
+            }
+        }
     }
+
+    public static void checkInput(String input) {
+        CoffeeLoop.input = input;
+        switch (input) {
+            case "fill":
+                fill();
+                break;
+            case "buy":
+                buy();
+                break;
+            case "remaining":
+                remain();
+                break;
+            case "take":
+                take();
+                break;
+            default:
+                break;
+        }
+
+    }
+
 
     //this method fills ingredients from input and gives the remaining amount
     public static void fill() {
