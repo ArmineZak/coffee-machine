@@ -35,4 +35,16 @@ public class CoffeeLoop {
                 cash + "$\n");
     }
 
+
+    //this method shows the amount of remaining ingredients
+    public static void remain() {
+        System.out.println("Remaining:\n" +
+                water + " ml water\n" +
+                milk + " ml milk\n" +
+                coffee + " gr coffee\n" +
+                cups + " cups\n" +
+                cash + "$");
+
+    }
 }
+
