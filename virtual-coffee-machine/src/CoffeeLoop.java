@@ -53,6 +53,78 @@ public class CoffeeLoop {
         int takeCash = sc.nextInt();
         cash -= takeCash;
         System.out.println("Cash in machine " + cash);
+
+    }
+
+
+    // this method is for choosing among different varieties of coffee
+    //and to show whether ingredients are enough
+    public static void buy() {
+        System.out.print("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino\n" + "> ");
+        int variety = sc.nextInt();
+
+        switch (variety) {
+            case 1: {
+                if (water >= 250 && milk >= 0 && coffee >= 16 && cups >= 1) {
+                    water -= 250;
+                    milk -= 0;
+                    coffee -= 16;
+                    cups -= 1;
+                    cash += 4;
+                    System.out.println("I can make you coffee.");
+
+                } else {
+                    System.out.print("Coffee machine is out of ingredients.\n" +
+                            water + " ml water\n" +
+                            milk + " ml milk\n" +
+                            coffee + " g coffee\n" +
+                            cups + " cups\n" +
+                            cash + " $\n");
+                    fill();
+                }
+            }
+            break;
+            case 2: {
+                if (water >= 350 && milk >= 75 && coffee >= 20 && cups >= 1) {
+                    water -= 350;
+                    milk -= 75;
+                    coffee -= 20;
+                    cups -= 1;
+                    cash += 7;
+                    System.out.println("I can make you coffee.");
+
+                } else {
+                    System.out.print("Coffee machine is out of ingredients.\n" +
+                            water + " ml water\n" +
+                            milk + " ml milk\n" +
+                            coffee + " g coffee\n" +
+                            cups + " cups\n" +
+                            cash + " $\n");
+                    fill();
+                }
+            }
+            break;
+
+            case 3: {
+                if (water >= 200 && milk >= 100 && coffee >= 12 && cups >= 1) {
+                    water -= 200;
+                    milk -= 100;
+                    coffee -= 12;
+                    cups -= 1;
+                    cash += 6;
+                    System.out.println("I can make you coffee.");
+
+                } else {
+                    System.out.print("Coffee machine is out of ingredients.\n" +
+                            water + " ml water\n" +
+                            milk + " ml milk\n" +
+                            coffee + " g coffee\n" +
+                            cups + " cups\n" +
+                            cash + " $\n");
+                    fill();
+                }
+            }
+            break;
+        }
     }
 }
-
