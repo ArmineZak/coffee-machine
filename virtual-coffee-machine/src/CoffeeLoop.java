@@ -46,5 +46,13 @@ public class CoffeeLoop {
                 cash + "$");
 
     }
+
+    //this method shows the amount of cash and asks how much to take from it
+    public static void take() {
+        System.out.print("Cash in machine: " + cash + "$   " + "How much money do you want to take?\n" + "> ");
+        int takeCash = sc.nextInt();
+        cash -= takeCash;
+        System.out.println("Cash in machine " + cash);
+    }
 }
 
