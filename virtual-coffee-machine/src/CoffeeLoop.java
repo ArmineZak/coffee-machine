@@ -7,7 +7,7 @@ public class CoffeeLoop {
     public static int coffee = 120;
     public static int cups = 9;
     public static int cash = 550;
-    private static String input;
+    private static String input;//this was added here automatically
 
     public static void main(String[] args) {
 
