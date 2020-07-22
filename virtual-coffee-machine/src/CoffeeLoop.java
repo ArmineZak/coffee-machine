@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class CoffeeLoop {
@@ -13,7 +14,7 @@ public class CoffeeLoop {
 
 
         while (true) {
-            System.out.print("Write action buy, fill, take, remaining, exit:\n" + "> ");
+            System.out.println("Write action buy, fill, take, remaining, exit:");
             Scanner input = new Scanner(System.in);
             String userInput = input.nextLine();
 
@@ -50,45 +51,45 @@ public class CoffeeLoop {
     //this method fills ingredients from input and gives the remaining amount
     public static void fill() {
 
-        System.out.print("Fill water: \n" + "> ");
+        System.out.println("Fill water:");
         int fillWater = sc.nextInt();
         water += fillWater;
 
-        System.out.print("Fill milk: \n" + "> ");
+        System.out.println("Fill milk:");
         int fillMilk = sc.nextInt();
         milk += fillMilk;
 
-        System.out.print("Fill coffee: \n" + "> ");
+        System.out.println("Fill coffee:");
         int fillCoffee = sc.nextInt();
         coffee += fillCoffee;
 
-        System.out.print("Add cups: \n" + "> ");
+        System.out.println("Add cups:");
         int addCups = sc.nextInt();
         coffee += addCups;
 
-        System.out.println("Machine has\n " +
-                water + " ml water\n" +
-                milk + " ml milk\n" +
-                coffee + " g coffee\n" +
-                cups + " cups\n" +
-                cash + "$\n");
+        System.out.println("Machine has:");
+        System.out.println(water + " ml water");
+        System.out.println(milk + " ml milk");
+        System.out.println(coffee + " g coffee");
+        System.out.println(cups + " cups");
+        System.out.println(cash + "$");
     }
 
 
     //this method shows the amount of remaining ingredients
     public static void remain() {
-        System.out.println("Remaining:\n" +
-                water + " ml water\n" +
-                milk + " ml milk\n" +
-                coffee + " gr coffee\n" +
-                cups + " cups\n" +
-                cash + "$");
+        System.out.println("Remaining:");
+        System.out.println(water + " ml water");
+        System.out.println(milk + " ml milk");
+        System.out.println(coffee + " gr coffee");
+        System.out.println(cups + " cups");
+        System.out.println(cash + "$");
 
     }
 
     //this method shows the amount of cash and asks how much to take from it
     public static void take() {
-        System.out.print("Cash in machine: " + cash + "$   " + "How much money do you want to take?\n" + "> ");
+        System.out.println("Cash in machine: " + cash + "$   " + "How much money do you want to take?");
         int takeCash = sc.nextInt();
         cash -= takeCash;
         System.out.println("Cash in machine " + cash);
@@ -99,7 +100,7 @@ public class CoffeeLoop {
     // this method is for choosing among different varieties of coffee
     //and to show whether ingredients are enough
     public static void buy() {
-        System.out.print("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino\n" + "> ");
+        System.out.println("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino");
         int variety = sc.nextInt();
 
         switch (variety) {
@@ -114,12 +115,12 @@ public class CoffeeLoop {
                     revertBuy();
 
                 } else {
-                    System.out.print("Coffee machine is out of ingredients.\n" +
-                            water + " ml water\n" +
-                            milk + " ml milk\n" +
-                            coffee + " g coffee\n" +
-                            cups + " cups\n" +
-                            cash + " $\n");
+                    System.out.println("Coffee machine is out of ingredients.");
+                    System.out.println(water + " ml water");
+                    System.out.println(milk + " ml milk");
+                    System.out.println(coffee + " g coffee");
+                    System.out.println(cups + " cups");
+                    System.out.println(cash + " $");
                     fill();
                 }
             }
@@ -135,12 +136,12 @@ public class CoffeeLoop {
                     revertBuy();
 
                 } else {
-                    System.out.print("Coffee machine is out of ingredients.\n" +
-                            water + " ml water\n" +
-                            milk + " ml milk\n" +
-                            coffee + " g coffee\n" +
-                            cups + " cups\n" +
-                            cash + " $\n");
+                    System.out.println("Coffee machine is out of ingredients.");
+                    System.out.println(water + " ml water");
+                    System.out.println(milk + " ml milk");
+                    System.out.println(coffee + " g coffee");
+                    System.out.println(cups + " cups");
+                    System.out.println(cash + " $");
                     fill();
                 }
             }
@@ -157,12 +158,12 @@ public class CoffeeLoop {
                     revertBuy();
 
                 } else {
-                    System.out.print("Coffee machine is out of ingredients.\n" +
-                            water + " ml water\n" +
-                            milk + " ml milk\n" +
-                            coffee + " g coffee\n" +
-                            cups + " cups\n" +
-                            cash + " $\n");
+                    System.out.println("Coffee machine is out of ingredients.");
+                    System.out.println(water + " ml water");
+                    System.out.println(milk + " ml milk");
+                    System.out.println(coffee + " g coffee");
+                    System.out.println(cups + " cups");
+                    System.out.println(cash + " $");
                     fill();
                 }
             }
