@@ -40,8 +40,6 @@ public class EnoughCoffeeRound2 {
         } else if (cupsAmount > min) {
             System.out.println("No, I can make only " + min + " cup(s) of coffee.");
 
-
         }
-
     }
 }
