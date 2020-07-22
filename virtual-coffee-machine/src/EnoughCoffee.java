@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.*;
 
-public class EnoughCoffeeRound2 {
+public class EnoughCoffee {
     public static void main(String[] args) {
 
         int waterForOneCup = 200;
