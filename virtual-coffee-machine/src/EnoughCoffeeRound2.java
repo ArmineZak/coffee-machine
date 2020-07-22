@@ -9,16 +9,16 @@ public class EnoughCoffeeRound2 {
         int coffeeBeansForOneCup = 15;
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Write how many ml of water the coffee machine has:\n" + "> ");
+        System.out.println("Write how many ml of water the coffee machine has:");
         int waterAmount = sc.nextInt();
 
-        System.out.print("Write how many ml of milk the coffee machine has:\n" + "> ");
+        System.out.println("Write how many ml of milk the coffee machine has:");
         int milkAmount = sc.nextInt();
 
-        System.out.print("Write how many grams of coffee beans the coffee machine has:\n" + "> ");
+        System.out.println("Write how many grams of coffee beans the coffee machine has:");
         int coffeeBeansAmount = sc.nextInt();
 
-        System.out.print("Write how many cups of coffee you will need:\n" + "> ");
+        System.out.println("Write how many cups of coffee you will need:");
         int cupsAmount = sc.nextInt();
 
 
