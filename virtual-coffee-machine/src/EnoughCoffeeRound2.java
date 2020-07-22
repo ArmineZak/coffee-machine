@@ -29,16 +29,19 @@ public class EnoughCoffeeRound2 {
         int min = Math.min(minWater, Math.min(minMilk, minCoffeeBeans));
 
 
-        if (cupsAmount == min) {
-            System.out.println("Yes, I can make that amount of coffee.");
+        if (cupsAmount == min || cupsAmount < min) {
+            if (cupsAmount == min) {
+                System.out.println("Yes, I can make that amount of coffee.");
+
+            } else if (cupsAmount < min) {
+                System.out.println("Yes, I can make that amount of coffee(and even " + (min - cupsAmount) + " more than that)");
+            }
 
         } else if (cupsAmount > min) {
             System.out.println("No, I can make only " + min + " cup(s) of coffee.");
 
-        } else if (cupsAmount < min) {
-            System.out.println("Yes, I can make that amount of coffee(and even " + (min - cupsAmount) + " more than that)");
 
         }
-    }
 
+    }
 }
