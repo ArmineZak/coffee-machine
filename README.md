@@ -2,6 +2,8 @@
 This program gives instruction how to make coffee and calculates the amount of ingredients needed to make a certain amount of coffee.
 
 
+# Enough coffee
+This part calculates whether the machine will be able to make the required amount of coffee from the specified amount of ingredients
 
 
 # Machine in Action
