@@ -12,12 +12,7 @@ public class MachineInAction {
 
     public static void main(String[] args) {
 
-        System.out.println("The coffee machine has:");
-        System.out.println(waterInMachine + "  of water");
-        System.out.println(milkInMachine + "  of milk");
-        System.out.println(coffeeBeansInMachine + "  of coffee beans");
-        System.out.println(disposableCupsInMachine + "    of disposable cups");
-        System.out.println(moneyInMachine + "  of money");
+        remain();
 
         System.out.println("Write action (buy, fill, take)");
         String action = sc.nextLine();
@@ -121,6 +116,7 @@ public class MachineInAction {
     }
 
     public static void remain() {
+        System.out.println("The coffee machine has:");
         System.out.println(waterInMachine + " ml  of water");
         System.out.println(milkInMachine + " ml of milk");
         System.out.println(coffeeBeansInMachine + " g of coffee beans");
