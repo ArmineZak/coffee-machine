@@ -23,7 +23,6 @@ public class MachineInAction {
         String action = sc.nextLine();
 
 
-
         if ("buy".equals(action)) {
             buy();
         } else if ("fill".equals(action)) {
@@ -42,53 +41,15 @@ public class MachineInAction {
 
         switch (coffee) {
             case 1: {
-                waterInMachine -= 250;
-                milkInMachine -= 0;
-                coffeeBeansInMachine -= 16;
-                disposableCupsInMachine -= 1;
-                moneyInMachine += 4;
-
-                System.out.println("The coffee machine has:");
-                System.out.println(waterInMachine + " ml  of water");
-                System.out.println(milkInMachine + " ml of milk");
-                System.out.println(coffeeBeansInMachine + " g of coffee beans");
-                System.out.println(disposableCupsInMachine + "  of disposable cups");
-                System.out.println(moneyInMachine + " of money");
-
+                buyEspresso();
                 break;
             }
-
             case 2: {
-                waterInMachine -= 350;
-                milkInMachine -= 75;
-                coffeeBeansInMachine -= 20;
-                disposableCupsInMachine -= 1;
-                moneyInMachine += 7;
-
-                System.out.println("The coffee machine has:");
-                System.out.println(waterInMachine + " ml  of water");
-                System.out.println(milkInMachine + " ml of milk");
-                System.out.println(coffeeBeansInMachine + " g of coffee beans");
-                System.out.println(disposableCupsInMachine + "  of disposable cups");
-                System.out.println(moneyInMachine + " of money");
-
+                buyLatte();
                 break;
-
             }
             case 3: {
-                waterInMachine -= 200;
-                milkInMachine -= 100;
-                coffeeBeansInMachine -= 12;
-                disposableCupsInMachine -= 1;
-                moneyInMachine += 6;
-
-                System.out.println("The coffee machine has:");
-                System.out.println(waterInMachine + " ml  of water");
-                System.out.println(milkInMachine + " ml of milk");
-                System.out.println(coffeeBeansInMachine + " g of coffee beans");
-                System.out.println(disposableCupsInMachine + "  of disposable cups");
-                System.out.println(moneyInMachine + " of money");
-
+                buyCappuccino();
                 break;
             }
         }
@@ -108,18 +69,17 @@ public class MachineInAction {
         System.out.println("Write how many disposable cups of coffee do you want:");
         int disposableCupsAmount = sc.nextInt();
 
-        System.out.println("The coffee machine has:");
         System.out.println(waterInMachine + " ml  of water");
         System.out.println(milkInMachine + " ml of milk");
         System.out.println(coffeeBeansInMachine + " g of coffee beans");
         System.out.println(disposableCupsInMachine + "  of disposable cups");
         System.out.println(moneyInMachine + " of money");
+
     }
 
 
     public static void take() {
         System.out.println("I gave you $" + moneyInMachine);
-        System.out.println("The coffee machine has:");
         System.out.println(waterInMachine + " ml  of water");
         System.out.println(milkInMachine + " ml of milk");
         System.out.println(coffeeBeansInMachine + " g of coffee beans");
@@ -127,7 +87,54 @@ public class MachineInAction {
         System.out.println(moneyInMachine + " of money");
 
     }
+
+    public static void buyEspresso() {
+        waterInMachine -= 250;
+        milkInMachine -= 0;
+        coffeeBeansInMachine -= 16;
+        disposableCupsInMachine -= 1;
+        moneyInMachine += 4;
+
+        System.out.println(waterInMachine + " ml  of water");
+        System.out.println(milkInMachine + " ml of milk");
+        System.out.println(coffeeBeansInMachine + " g of coffee beans");
+        System.out.println(disposableCupsInMachine + "  of disposable cups");
+        System.out.println(moneyInMachine + " of money");
+
+    }
+
+    public static void buyLatte() {
+        waterInMachine -= 350;
+        milkInMachine -= 75;
+        coffeeBeansInMachine -= 20;
+        disposableCupsInMachine -= 1;
+        moneyInMachine += 7;
+
+        System.out.println(waterInMachine + " ml  of water");
+        System.out.println(milkInMachine + " ml of milk");
+        System.out.println(coffeeBeansInMachine + " g of coffee beans");
+        System.out.println(disposableCupsInMachine + "  of disposable cups");
+        System.out.println(moneyInMachine + " of money");
+
+    }
+
+    public static void buyCappuccino() {
+        waterInMachine -= 200;
+        milkInMachine -= 100;
+        coffeeBeansInMachine -= 12;
+        disposableCupsInMachine -= 1;
+        moneyInMachine += 6;
+
+        System.out.println(waterInMachine + " ml  of water");
+        System.out.println(milkInMachine + " ml of milk");
+        System.out.println(coffeeBeansInMachine + " g of coffee beans");
+        System.out.println(disposableCupsInMachine + "  of disposable cups");
+        System.out.println(moneyInMachine + " of money");
+
+    }
+
 }
+
 
 
 
