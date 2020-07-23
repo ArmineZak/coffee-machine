@@ -10,7 +10,7 @@ public class Features {
     private static int cash = 550;
 
 
-    public  void checkInput(String enter) {
+    public static void checkInput(String enter) {
         switch (enter) {
             case "fill":
                 fill();
@@ -32,7 +32,7 @@ public class Features {
 
 
     //this method fills ingredients with input and gives the remaining amount of them
-    public void fill() {
+    public static void fill() {
 
         System.out.println("Fill water:");
         int fillWater = sc.nextInt();
@@ -57,7 +57,7 @@ public class Features {
 
 
     //this method shows the remaining ingredients
-    public void remain() {
+    public static void remain() {
         System.out.println("Remaining:");
         remainIngredients();
     }
@@ -65,7 +65,7 @@ public class Features {
 
 
     //this method shows the money in machine and asks how much money to give
-    public void take() {
+    public static void take() {
         System.out.println("Cash in machine: " + cash + "$   " + "How much money do you want to take?");
         int takeCash = sc.nextInt();
         cash -= takeCash;
@@ -76,7 +76,7 @@ public class Features {
 
     // this method is for choosing among different varieties of coffee
     //and to show whether ingredients are enough
-    public void buy() {
+    public static void buy() {
         System.out.println("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino");
         int variety = sc.nextInt();
 
@@ -95,7 +95,7 @@ public class Features {
 
 
     //this method gives option to revert back to menu
-    public void revertBuy() {
+    public static void revertBuy() {
         Scanner input = new Scanner(System.in);
         System.out.println("If you want to cancel your order type back or type any key to continue.");
         String userInput = input.nextLine();
@@ -107,7 +107,7 @@ public class Features {
 
 
     //shows whether ingredients are enough to make Espresso or not
-    public void buyEspresso() {
+    public static void buyEspresso() {
         if (water >= 250 && milk >= 0 && coffee >= 16 && cups >= 1) {
             water -= 250;
             milk -= 0;
@@ -127,7 +127,7 @@ public class Features {
 
 
     //shows whether ingredients are enough to make Latte or not
-    public void buyLatte() {
+    public static void buyLatte() {
         if (water >= 350 && milk >= 75 && coffee >= 20 && cups >= 1) {
             water -= 350;
             milk -= 75;
@@ -146,7 +146,7 @@ public class Features {
 
 
     //shows whether ingredients are enough to make Cappuccino or not
-    public void buyCappuccino() {
+    public static void buyCappuccino() {
         if (water >= 200 && milk >= 100 && coffee >= 12 && cups >= 1) {
             water -= 200;
             milk -= 100;
@@ -165,7 +165,7 @@ public class Features {
     }
 
 //this method calculates the remaining ingredients
-    public void remainIngredients() {
+    public static void remainIngredients() {
         System.out.println(water + " ml water");
         System.out.println(milk + " ml milk");
         System.out.println(coffee + " gr coffee");
