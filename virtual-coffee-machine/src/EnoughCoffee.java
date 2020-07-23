@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class EnoughCoffee {
+
     public static void main(String[] args) {
 
         int waterForOneCup = 200;
@@ -25,6 +26,7 @@ public class EnoughCoffee {
 
 
         //using Math.min to find the min possible amount of cups for each variety of coffee
+
         int minWater = waterAmount / waterForOneCup;
         int minMilk = milkAmount / milkForOneCup;
         int minCoffeeBeans = coffeeBeansAmount / coffeeBeansForOneCup;
@@ -32,7 +34,8 @@ public class EnoughCoffee {
         int min = Math.min(minWater, Math.min(minMilk, minCoffeeBeans));
 
 
-        //checking cases for possible amount of cups be made
+        //checking cases for possible amount of cups to be made
+
         if (cupsAmount == min || cupsAmount < min) {
             if (cupsAmount == min) {
                 System.out.println("Yes, I can make that amount of coffee.");
@@ -47,3 +50,4 @@ public class EnoughCoffee {
         }
     }
 }
+
