@@ -2,12 +2,18 @@
 This program gives instruction how to make coffee and calculates the amount of ingredients needed to make a certain amount of coffee.
 
 
+# Calculation of ingredients 
+This part of the program calculates the amount of ingredients needed to make a certain amount of coffee.
+It asks user to input necessary amount of ingredients.
+
+
 # Enough coffee
-This part calculates whether the machine will be able to make the required amount of coffee from the specified amount of ingredients
+This part calculates whether the machine will be able to make the required amount of coffee from the specified amount of ingredients.
+It uses input to fill the amount of ingredients, calculates the minimum amount of cups that can be made for each variety of coffee and gives information if it is possible to make asked cups of coffee and offers more cups if possible to make.
 
 
 # Machine in Action
-This part of the program offers to buy one cup of coffee or to fill the ingredients or to take it's money. At the same time, the program should calculate how many ingredients it has left. And also display the number of ingredients before and after purchase.
+This part of the program offers to buy one cup of coffee or to fill the ingredients or to take it's money. At the same time, the program calculates how many ingredients it has left. And also displays the number of ingredients before and after purchase.
 
 
 # Coffee loop
