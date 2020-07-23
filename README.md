@@ -18,4 +18,5 @@ This part of the program offers to buy one cup of coffee or to fill the ingredie
 
 # Coffee loop
 This part of the program works endlessly to make coffee until the shutdown signal is given.
+It uses several methods. Each is responsibel for spicific function that coffee machine does  - buy, fill, take, remain, back and exit. Machine loops over and over again asking whitch achtion to choose and stops when is choosen exit option.
 
