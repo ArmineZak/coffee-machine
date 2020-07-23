@@ -8,6 +8,8 @@ public class EnoughCoffee {
         int milkForOneCup = 50;
         int coffeeBeansForOneCup = 15;
 
+
+        //using scanner to input necessary amount of ingredients
         Scanner sc = new Scanner(System.in);
         System.out.println("Write how many ml of water the coffee machine has:");
         int waterAmount = sc.nextInt();
@@ -22,6 +24,7 @@ public class EnoughCoffee {
         int cupsAmount = sc.nextInt();
 
 
+        //using Math.min to find the min possible amount of cups for each variety of coffee
         int minWater = waterAmount / waterForOneCup;
         int minMilk = milkAmount / milkForOneCup;
         int minCoffeeBeans = coffeeBeansAmount / coffeeBeansForOneCup;
@@ -29,6 +32,7 @@ public class EnoughCoffee {
         int min = Math.min(minWater, Math.min(minMilk, minCoffeeBeans));
 
 
+        //checking cases for possible amount of cups be made
         if (cupsAmount == min || cupsAmount < min) {
             if (cupsAmount == min) {
                 System.out.println("Yes, I can make that amount of coffee.");
