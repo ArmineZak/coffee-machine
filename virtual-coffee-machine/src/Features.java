@@ -30,6 +30,7 @@ public class Features {
 
     }
 
+
     //this method fills ingredients with input and gives the remaining amount of them
     public static void fill() {
 
@@ -50,32 +51,28 @@ public class Features {
         cups += addCups;
 
         System.out.println("Machine has:");
-        System.out.println(water + " ml water");
-        System.out.println(milk + " ml milk");
-        System.out.println(coffee + " g coffee");
-        System.out.println(cups + " cups");
-        System.out.println(cash + "$");
-
+        remainIngredients();
     }
+
+
 
     //this method shows the remaining ingredients
     public static void remain() {
         System.out.println("Remaining:");
-        System.out.println(water + " ml water");
-        System.out.println(milk + " ml milk");
-        System.out.println(coffee + " gr coffee");
-        System.out.println(cups + " cups");
-        System.out.println(cash + "$");
-
+        remainIngredients();
     }
 
+
+
+    //this method shows the money in machine and asks how much money to give
     public static void take() {
         System.out.println("Cash in machine: " + cash + "$   " + "How much money do you want to take?");
         int takeCash = sc.nextInt();
         cash -= takeCash;
         System.out.println("Cash in machine " + cash);
-
     }
+
+
 
     // this method is for choosing among different varieties of coffee
     //and to show whether ingredients are enough
@@ -84,72 +81,18 @@ public class Features {
         int variety = sc.nextInt();
 
         switch (variety) {
-            case 1: {
-                if (water >= 250 && milk >= 0 && coffee >= 16 && cups >= 1) {
-                    water -= 250;
-                    milk -= 0;
-                    coffee -= 16;
-                    cups -= 1;
-                    cash += 4;
-                    System.out.println("I can make you coffee.");
-                    revertBuy();
-
-                } else {
-                    System.out.println("Coffee machine is out of ingredients.");
-                    System.out.println(water + " ml water");
-                    System.out.println(milk + " ml milk");
-                    System.out.println(coffee + " g coffee");
-                    System.out.println(cups + " cups");
-                    System.out.println(cash + " $");
-                    fill();
-                }
-            }
-            break;
-            case 2: {
-                if (water >= 350 && milk >= 75 && coffee >= 20 && cups >= 1) {
-                    water -= 350;
-                    milk -= 75;
-                    coffee -= 20;
-                    cups -= 1;
-                    cash += 7;
-                    System.out.println("I can make you coffee.");
-                    revertBuy();
-
-                } else {
-                    System.out.println("Coffee machine is out of ingredients.");
-                    System.out.println(water + " ml water");
-                    System.out.println(milk + " ml milk");
-                    System.out.println(coffee + " g coffee");
-                    System.out.println(cups + " cups");
-                    System.out.println(cash + " $");
-                    fill();
-                }
-            }
-            break;
-
-            case 3: {
-                if (water >= 200 && milk >= 100 && coffee >= 12 && cups >= 1) {
-                    water -= 200;
-                    milk -= 100;
-                    coffee -= 12;
-                    cups -= 1;
-                    cash += 6;
-                    System.out.println("I can make you coffee.");
-                    revertBuy();
-
-                } else {
-                    System.out.println("Coffee machine is out of ingredients.");
-                    System.out.println(water + " ml water");
-                    System.out.println(milk + " ml milk");
-                    System.out.println(coffee + " g coffee");
-                    System.out.println(cups + " cups");
-                    System.out.println(cash + " $");
-                    fill();
-                }
-            }
-            break;
+            case 1:
+                buyEspresso();
+                break;
+            case 2:
+                buyLatte();
+                break;
+            case 3:
+                buyCappuccino();
+                break;
         }
     }
+
 
     //this method gives option to revert back to menu
     public static void revertBuy() {
@@ -161,5 +104,75 @@ public class Features {
             System.out.println("You are in main menu.");
         }
     }
+
+
+    //shows whether ingredients are enough to make Espresso or not
+    public static void buyEspresso() {
+        if (water >= 250 && milk >= 0 && coffee >= 16 && cups >= 1) {
+            water -= 250;
+            milk -= 0;
+            coffee -= 16;
+            cups -= 1;
+            cash += 4;
+            System.out.println("I can make you coffee.");
+            revertBuy();
+
+        } else {
+
+            System.out.println("Coffee machine is out of ingredients.");
+            remainIngredients();
+            fill();
+        }
+    }
+
+
+    //shows whether ingredients are enough to make Latte or not
+    public static void buyLatte() {
+        if (water >= 350 && milk >= 75 && coffee >= 20 && cups >= 1) {
+            water -= 350;
+            milk -= 75;
+            coffee -= 20;
+            cups -= 1;
+            cash += 7;
+            System.out.println("I can make you coffee.");
+            revertBuy();
+
+        } else {
+            System.out.println("Coffee machine is out of ingredients.");
+            remainIngredients();
+            fill();
+        }
+    }
+
+
+    //shows whether ingredients are enough to make Cappuccino or not
+    public static void buyCappuccino() {
+        if (water >= 200 && milk >= 100 && coffee >= 12 && cups >= 1) {
+            water -= 200;
+            milk -= 100;
+            coffee -= 12;
+            cups -= 1;
+            cash += 6;
+            System.out.println("I can make you coffee.");
+            revertBuy();
+
+        } else {
+
+            System.out.println("Coffee machine is out of ingredients.");
+            remainIngredients();
+            fill();
+        }
+    }
+
+//this method calculates the remaining ingredients
+    public static void remainIngredients() {
+        System.out.println(water + " ml water");
+        System.out.println(milk + " ml milk");
+        System.out.println(coffee + " gr coffee");
+        System.out.println(cups + " cups");
+        System.out.println(cash + "$");
+    }
 }
+
+
 
