@@ -10,7 +10,7 @@ public class Features {
     private static int cash = 550;
 
 
-    public static void checkInput(String enter) {
+    public void checkInput(String enter) {
         switch (enter) {
             case "fill":
                 fill();
@@ -32,7 +32,7 @@ public class Features {
 
 
     //this method fills ingredients with input and gives the remaining amount of them
-    public static void fill() {
+    public void fill() {
 
         System.out.println("Fill water:");
         int fillWater = sc.nextInt();
@@ -57,7 +57,7 @@ public class Features {
 
 
     //this method shows the remaining ingredients
-    public static void remain() {
+    public void remain() {
         System.out.println("Remaining:");
         remainIngredients();
     }
@@ -65,7 +65,7 @@ public class Features {
 
 
     //this method shows the money in machine and asks how much money to give
-    public static void take() {
+    public void take() {
         System.out.println("Cash in machine: " + cash + "$   " + "How much money do you want to take?");
         int takeCash = sc.nextInt();
         cash -= takeCash;
@@ -76,7 +76,7 @@ public class Features {
 
     // this method is for choosing among different varieties of coffee
     //and to show whether ingredients are enough
-    public static void buy() {
+    public void buy() {
         System.out.println("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino");
         int variety = sc.nextInt();
 
@@ -95,7 +95,7 @@ public class Features {
 
 
     //this method gives option to revert back to menu
-    public static void revertBuy() {
+    public void revertBuy() {
         Scanner input = new Scanner(System.in);
         System.out.println("If you want to cancel your order type back or type any key to continue.");
         String userInput = input.nextLine();
