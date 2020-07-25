@@ -1,0 +1,2 @@
+# Coffee Machine Power
+Coffee machine has several states. Every time the user inputs something and a program passes that line to the method, the program determines how to interpret this line using the information about the current state. After processing this line, the state of the coffee machine can be changed or can stay the same.
