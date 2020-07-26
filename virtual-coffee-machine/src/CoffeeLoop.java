@@ -4,7 +4,7 @@ public class CoffeeLoop {
 
     public static void main(String[] args) {
         String userInput = "userInput";
-        Features f = new Features();
+        Features features = new Features();
 
 
         while (!"exit".equals(userInput)) {
@@ -15,7 +15,7 @@ public class CoffeeLoop {
             if ("exit".equals(userInput)) {
                 break;
             } else
-                f.checkInput(userInput);
+                features.checkInput(userInput);
         }
     }
 }

@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Features {
 
     private static Scanner sc = new Scanner(System.in);
-    private static int milk = 400;
-    private static int water = 540;
-    private static int coffee = 120;
-    private static int cups = 9;
-    private static int cash = 550;
+    private int milk = 400;
+    private int water = 540;
+    private int coffee = 120;
+    private int cups = 9;
+    private int cash = 550;
 
 
     public void checkInput(String enter) {
