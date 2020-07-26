@@ -3,33 +3,45 @@ import java.util.Scanner;
 public class MachineInAction {
 
     private static Scanner sc = new Scanner(System.in);
-    private static int waterInMachine = 400;
-    private static int milkInMachine = 540;
-    private static int coffeeBeansInMachine = 120;
-    private static int disposableCupsInMachine = 9;
-    private static int moneyInMachine = 550;
+    private int waterInMachine = 400;
+    private int milkInMachine = 540;
+    private int coffeeBeansInMachine = 120;
+    private int disposableCupsInMachine = 9;
+    private int moneyInMachine = 550;
+
+
+    public MachineInAction() {
+        this.waterInMachine = waterInMachine;
+        this.milkInMachine = milkInMachine;
+        this.coffeeBeansInMachine = coffeeBeansInMachine;
+        this.disposableCupsInMachine = disposableCupsInMachine;
+        this.moneyInMachine = moneyInMachine;
+    }
 
 
     public static void main(String[] args) {
 
-        remain();
+        MachineInAction machineInAction = new MachineInAction();
+        machineInAction.remain();
 
         System.out.println("Write action (buy, fill, take)");
         String action = sc.nextLine();
 
 
         if ("buy".equals(action)) {
-            buy();
+            machineInAction.buy();
         } else if ("fill".equals(action)) {
-            fill();
+            machineInAction.fill();
         } else if ("take".equals(action)) {
-            take();
+            machineInAction.take();
         }
 
     }
 
-    //the method chooses among variety of coffee
-    public static void buy() {
+    /**
+     * the method chooses among variety of coffee
+     */
+    public void buy() {
 
         System.out.println("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino:");
         int coffee = sc.nextInt();
@@ -50,11 +62,13 @@ public class MachineInAction {
         }
     }
 
-    //method uses input to fill ingredients and lists their amount after being filled
-    public static void fill() {
+    /**
+     * method uses input to fill ingredients and lists their amount after being filled
+     */
+    public void fill() {
         System.out.println("Write how many ml of water do you want to add:");
         int waterAmount = sc.nextInt();
-        waterInMachine += waterAmount;
+        milkInMachine += waterAmount;
 
         System.out.println("Write how many ml of milk do you want to add:");
         int milkAmount = sc.nextInt();
@@ -73,8 +87,10 @@ public class MachineInAction {
 
     }
 
-    //method is for taking money from machine and listing the remaining ingredients
-    public static void take() {
+    /**
+     * method is for taking money from machine and listing the remaining ingredients
+     */
+    public void take() {
         System.out.println("Write how much do you want to take:");
         int moneyAmount = sc.nextInt();
         moneyInMachine -= moneyAmount;
@@ -85,8 +101,10 @@ public class MachineInAction {
 
     }
 
-    //calculates ingredients needed for espresso and lists the remaining part
-    public static void buyEspresso() {
+    /**
+     * calculates ingredients needed for espresso and lists the remaining part
+     */
+    public void buyEspresso() {
         waterInMachine -= 250;
         milkInMachine -= 0;
         coffeeBeansInMachine -= 16;
@@ -96,8 +114,10 @@ public class MachineInAction {
 
     }
 
-    //calculates ingredients needed for latte and lists the remaining part
-    public static void buyLatte() {
+    /**
+     * calculates ingredients needed for latte and lists the remaining part
+     */
+    public void buyLatte() {
         waterInMachine -= 350;
         milkInMachine -= 75;
         coffeeBeansInMachine -= 20;
@@ -107,8 +127,10 @@ public class MachineInAction {
 
     }
 
-    //calculates ingredients needed for cappuccino and lists the remaining part
-    public static void buyCappuccino() {
+    /**
+     * calculates ingredients needed for cappuccino and lists the remaining part
+     */
+    public void buyCappuccino() {
         waterInMachine -= 200;
         milkInMachine -= 100;
         coffeeBeansInMachine -= 12;
@@ -118,8 +140,10 @@ public class MachineInAction {
 
     }
 
-    //method shows the remaining part of ingredients and money
-    public static void remain() {
+    /**
+     * method shows the remaining part of ingredients and money
+     */
+    public void remain() {
         System.out.println("The coffee machine has:");
         System.out.println(waterInMachine + " ml  of water");
         System.out.println(milkInMachine + " ml of milk");
