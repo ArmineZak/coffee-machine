@@ -43,7 +43,7 @@ public class CoffeeMachineInAction {
                 System.out.print("What do you want to buy? 1-espresso, 2-latte, 3-cappuccino:\n" + ">");
                 int coffee = sc.nextInt();
 
-                if (coffee != 2 && coffee != 3) {
+                if (coffee == 1) {
                     System.out.println("The coffee machine has:\n" +
                             (waterInMachine - waterForEspresso) + " ml  of water\n" +
                             (milkInMachine - milkForEspresso) + " ml of milk\n" +
@@ -51,7 +51,7 @@ public class CoffeeMachineInAction {
                             (disposableCupsInMachine - 1) + "  of disposable cups\n" +
                             (moneyInMachine + costOfEspresso) + " of money");
 
-                } else if (coffee != 1 && coffee != 3)
+                } else if (coffee == 2)
                     System.out.println("The coffee machine has:\n" +
                             (waterInMachine - waterForLatte) + " ml  of water\n" +
                             (milkInMachine - milkForLatte) + " ml of milk\n" +
