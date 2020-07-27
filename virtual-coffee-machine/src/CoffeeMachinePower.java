@@ -15,7 +15,7 @@ public class CoffeeMachinePower {
         this.cups = cups;
         this.cash = cash;
 
-        goToHome("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
+        backToMenu("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
 
     }
 
@@ -37,7 +37,7 @@ public class CoffeeMachinePower {
                 taking(enter);
                 break;
             default:
-                goToHome("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
+                backToMenu("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
         }
     }
 
@@ -60,13 +60,13 @@ public class CoffeeMachinePower {
         int cups = Integer.parseInt(fillingParts[3]);
         fill(milk, water, coffee, cups);
 
-        goToHome("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
+        backToMenu("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
     }
 
     /**
      * method takes to main menu
      */
-    private void goToHome(String s, State choosingAction) {
+    private void backToMenu(String s, State choosingAction) {
         System.out.println(s);
         this.state = choosingAction;
     }
@@ -101,7 +101,7 @@ public class CoffeeMachinePower {
                 suggestFilling();
                 break;
             case BUY:
-                goToHome("What do you want to buy? espresso, latte, cappuccino", State.CHOOSING_COFFEE);
+                backToMenu("What do you want to buy? espresso, latte, cappuccino", State.CHOOSING_COFFEE);
                 break;
             case REMAINING:
                 remain();
@@ -130,7 +130,7 @@ public class CoffeeMachinePower {
     private void remain() {
         System.out.println("Remaining:");
         remainIngredients();
-        goToHome("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
+        backToMenu("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
     }
 
     /**
@@ -147,7 +147,7 @@ public class CoffeeMachinePower {
     private void cashOut(int cash) {
         this.cash -= cash;
         System.out.println("Cash in machine: " + this.cash + "$");
-        goToHome("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
+        backToMenu("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
     }
 
     /**
@@ -161,14 +161,14 @@ public class CoffeeMachinePower {
         if ("back".equals(userInput)) {
             System.out.println("You are in main menu.");
         }
-        goToHome("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
+        backToMenu("Write buy, fill, take, remaining,exit", State.CHOOSING_ACTION);
     }
 
     /**
-     * method filles ingredients into machine
+     * method fills ingredients into machine
      */
     private void suggestFilling() {
-        goToHome("Fill ingredients in following order milk coffee water cups", State.FILLING);
+        backToMenu("Fill ingredients in following order milk coffee water cups", State.FILLING);
     }
 
     /**
@@ -191,19 +191,25 @@ public class CoffeeMachinePower {
         }
     }
 
-    //method shows necessary ingredients for Espresso
+    /**
+     * method shows necessary ingredients for Espresso
+     */
     private void buyEspresso() {
         makeCoffee(250, 0, 16, 4);
 
     }
 
-    //method shows necessary ingredients for Latte
+    /**
+     * method shows necessary ingredients for Latte
+     */
     private void buyLatte() {
         makeCoffee(350, 75, 20, 7);
 
     }
 
-    //method shows necessary ingredients for Cappuccino
+    /**
+     * method shows necessary ingredients for Cappuccino
+     */
     private void buyCappuccino() {
         makeCoffee(200, 100, 12, 6);
     }
