@@ -20,3 +20,6 @@ This part of the program offers to buy one cup of coffee or to fill the ingredie
 This part of the program works endlessly to make coffee until the shutdown signal is given.
 It uses several methods. Each is responsibel for spicific function that coffee machine does  - buy, fill, take, remain, back and exit. Machine loops over and over again asking whitch achtion to choose and stops when is choosen exit option.
 
+
+# Coffee Machine Power
+Coffee machine has several states. Every time the user inputs something and a program passes that line to the method, the program determines how to interpret this line using the information about the current state. After processing this line, the state of the coffee machine can be changed or can stay the same.
